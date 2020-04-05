@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册界面</title>
+  <style type="text/css">
+    body{
+      background-image:url("2.jpg");
+      background-size:100%100%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+    #i1{
+      margin: 15px;
+    }
+    #i2{
+      margin:15px;
+    }
+    #i3{
+      margin:15px;
+    }
+    #i4{
+      margin:15px;
+    }
+    #i5{
+       margin-top:  20px;
+       margin-left:  100px;
+      margin-right: 100px;
+       width:  200px;
+       height: 30px;
+     }
+  </style>
+  <script language="javascript">
+function  validate() 
+{  
+if  (document.form1.username.value.length  ==  0)  {  
+alert("请输入您姓名!"); 
+document.form1.username.focus(); 
+return  false; 
+} 
+else
+return  true; 
+} 
+function check() { 
+var value=document.form1.pwd.value;
+var pattern=/^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/;
+flag=pattern.test(value);
+if (flag) 
+return true; 
+else 
+{alert("密码格式不正确！"); 
+return false;}
+}
+</script>
+</head>
+<body>
+<div align="center">
+  <h1>用户注册界面</h1>
+  <br/>
+<form>
+  *&#160;用&#160;户&#160;名：
+  <input id ="i1"type ="text" name="username" onMouseout= "validate()">
+  <br/>
+  *&#160;密&#160;&#160;&#160;&#160;&#160;&#160;码：
+  <input id="i2"type = "password" name="pwd" onMouseout= "check()">
+  <br/>
+  *确认密码：
+  <input id="i3"type = "password">
+  <br/>
+  <p>
+  <input id="i5" type="submit" value="立即注册">
+  </p>
+  <p>
+    已有账号？<a href="Login.html">请登录</a>
+  </p>
+</form>
+</div>
+</body>
+</html>
