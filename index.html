@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>哈哈哈！！！</title>
+</head>
+<body>
+<p>DayToy！！！</p>
+<h1>你喜欢海绵宝宝，我喜欢你！！！</h1>
+<h2>嘻嘻嘻嘻！！！！</h2>
+<h5>愿你一生平安喜乐！！！！</h5>
+……
+<!--http请求方法：post方法：发送数据既可以在URL中也可以在请求体中，
+                            当发送数据在请求体中时，对于数据长度是没有限制的；
+                  get方法：发送数据在URL中，因此对于发送的数据有长度限制-->
+<!--发送http请求数据到服务器后台：
+    url=action地址，请求方法=method，请求类型=enctype
+    请求数据是表单中的组件属性name作为key-->
+<!--发送数据在url中显示-->
+<form action="login?key1=v1&key2=v2" method="post" enctype="application/x-www-form-urlencoded">
+    用户名：<input type="text" name="username" placeholder="请输入用户名">
+    密码：<input type="password"name="password" placeholder="请输入密码">
+    <input type="submit" value="提交">
+</form>
+<!--发送数据在请求体中显示-->
+<form action="login" method="post" enctype="application/x-www-form-urlencoded">
+    用户名：<input type="text" name="username" placeholder="请输入用户名">
+    密码：<input type="password"name="password" placeholder="请输入密码">
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
